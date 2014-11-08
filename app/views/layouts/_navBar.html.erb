@@ -1,0 +1,23 @@
+<nav class="navbar navbar-default" role="navigation">
+   <div class="container-fluid">
+   <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>  
+   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     <ul class="nav navbar-nav">
+        <li id='home-nav' role="presentation"> <%= link_to "Home", root_path %></li>
+        <li id='about-nav' role="presentation"> <%= link_to "About us", about_path %></li>
+        <li id='join-nav' role="presentation"> <%= link_to "Join us", how_to_join_path %></li>
+        <li id='what-you-need-nav' role="presentation"> <%= link_to "Get started", what_you_need_path %></li>
+        <li id='club-matters-nav' role="presentation"> <%= link_to "Club matters", club_matters_path %></li>
+        <li id='direction-nav' role="presentation"> <%= link_to "Where to find us?", directions_path %></li>
+        <li id='extras-nav' role="presentation"> <%= link_to "Extras", extraLinks_path %></li>
+    </ul>
+  </div>
+ </div>   
+</nav>

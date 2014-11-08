@@ -1,0 +1,25 @@
+<script type="text/javascript">
+$(function(){
+  $("#direction-nav").addClass("active");
+});
+</script>
+<article>
+<header>
+  <h1>How to find us</h1>
+</header>
+<section>
+  <p>To contact the Club e-mail cheamcroquetbowlsclub@gmail.com or phone 0208 642 0533.
+  </p>
+  <p>The Club is located in Cheam Recreation Ground, Tudor Close, Cheam, Sutton, Surrey SM3 8QS.  (This address should not be used for correspondence.)
+  </p>  
+  <p>Directions: From the A2043 just north of Cheam Village turn into Tudor Close. At the end of the road go through gates to enter the free car park. The Club (marked Bowling Green on the map) is just inside the Recreation Ground opposite a children’s playground.
+  </p>  
+    <!-- For embedded map -->    
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false">         </script>
+  <div class="location-container">
+      <div id="idmap" class="map-show" ></div>
+  </div>
+  <%= javascript_include_tag 'map-location'%>
+
+</section>
+</article>

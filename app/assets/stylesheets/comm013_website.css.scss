@@ -1,0 +1,51 @@
+
+body{
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial, Sans-serif; 
+    text-align: justify;
+}
+.navbar-default{
+    background-color: transparent;
+    border: none;
+    font-size: 1.4em;
+    
+}
+.navbar-default .navbar-nav > li > a{
+  color: #347C2C;
+}
+#intro {
+  padding-top: 25.93%;
+  background: url('/assets/croquetImage.jpg') no-repeat;
+  border-radius: 17px;
+  background-size: cover;
+  -moz-background-size: cover;  /* Firefox 3.6 */
+  background-position: center;  /* Internet Explorer 7/8 */
+}
+/*maintains the ratio in maps images*/
+
+@mixin maintain-ratio($ratio: 1 1) {
+  @if length($ratio) < 2 or length($ratio) > 2 {
+    @warn "$ratio must be a list with two values.";
+  }
+  $width: 100%;
+  $height: percentage(nth($ratio, 2) / nth($ratio, 1));
+  
+  width: $width;
+  height: 0;
+  padding-bottom: $height;
+}
+.location-container{
+  overflow: hidden;
+  @include maintain-ratio(1 1);
+}
+.map-show{
+  @include maintain-ratio(1 1);
+  
+}
+
+h2 h1 {
+  color: green;
+}
+
