@@ -46,9 +46,12 @@ h2 {
   color: #41A317;
 }
 .container-fluid{
-  background-color: #DEDEDC;
+ /* background-color: #DEDEDC;*/
   border-radius:17px;
-  box-shadow:  inset 2px 3px 2px rgba(0, 0, 0, 0.1);
+  background: -webkit-linear-gradient(180deg, #EAF6EA, #BEC7BE); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(180deg, #EAF6EA, #BEC7BE); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(180deg, #EAF6EA, #BEC7BE); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(180deg, #EAF6EA, #BEC7BE); /* Standard syntax (must be last) */
 }
 .navbar-default{
     background-color: transparent;
