@@ -1,12 +1,25 @@
 
 body{
-    max-width: 70%;
+    max-width: 940px;
     margin-left: auto;
     margin-right: auto;
-    font-family: Arial, Sans-serif; 
+   font-family: Arial, Sans-serif; 
     text-align: justify;
-    background-color: #e7e7e7;
     
+}
+
+@media (max-width:768px){
+  body{
+    margin-left:7%;
+    margin-right:7%;
+  }
+}
+
+.navbar-default .navbar-toggle{
+  border-color: transparent;
+}
+.carousel-control.left, .carousel-control.right{
+ /* border-radius: 17px;*/
 }
 /*maintains the ratio in background images*/
 @mixin maintain-ratio($ratio: 1 1) {
@@ -23,29 +36,32 @@ body{
 #intro {
   padding-top: 25.93%;
   background: url('/assets/croquetImage.jpg') no-repeat;
-  filter: alpha(opacity=40); /* For IE8 and earlier */
-  border-radius: 17px;
+  /*border-radius: 17px;*/
   background-size: cover;
   -moz-background-size: cover;  /* Firefox 3.6 */
   background-position: center;  /* Internet Explorer 7/8 */
-  opacity: 0.7;
-  filter: Alpha(opacity=20); /* IE8 and earlier */
+
 }
 h2 {
   color: #41A317;
 }
-li:hover{
-  background-color:  #D4DBC9;
-  border-radius: 10px;
+.container-fluid{
+  background-color: #DEDEDC;
+  border-radius:17px;
+  box-shadow:  inset 2px 3px 2px rgba(0, 0, 0, 0.1);
 }
 .navbar-default{
     background-color: transparent;
     border: none;
-    font-size: 1.1em;
-    margin-top: 1%;
+    font-size: medium;
 }
 .navbar-default .navbar-nav > li > a{
   color: #347C2C;
+}
+
+li:hover{
+  background-color:  #D4DBC9;
+  border-radius: 10px;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
   color: #ffffff;
@@ -53,8 +69,6 @@ li:hover{
   border-radius: 10px;
   
 }
-
-
 .location-container{
   overflow: hidden;
   @include maintain-ratio(1 1);

@@ -1,13 +1,13 @@
 <script type="text/javascript">
   //check if site is in root location then set home to active
+      $(document).ready( function() {
   if(this.location.pathname == "/"){
-    $(document).ready( function() {
     $('#home-nav').addClass('active');
-    } );
   }else{
     //else check that the current location is set to active
   $('a[href="' + this.location.pathname + '"]').parents('li,ul').addClass('active');
   }
+ } );
 </script>
 <nav class="navbar navbar-default" role="navigation">
    <div class="container-fluid">
@@ -22,12 +22,13 @@
    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
      <ul class="nav navbar-nav">
         <li id='home-nav' role="presentation"> <%= link_to "Home", root_path %></li>
-        <li id='about-nav' role="presentation"> <%= link_to "About us", about_path %></li>
-        <li id='join-nav' role="presentation"> <%= link_to "Join us", how_to_join_path %></li>
-        <li id='what-you-need-nav' role="presentation"> <%= link_to "Get started", what_you_need_path %></li>
-        <li id='club-matters-nav' role="presentation"> <%= link_to "Club matters", club_matters_path %></li>
-        <li id='direction-nav' role="presentation"> <%= link_to "Where to find us?", directions_path %></li>
-        <li id='extras-nav' role="presentation"> <%= link_to "Extras", extraLinks_path %></li>
+        <li role="presentation"> <%= link_to "About us", about_path %></li>
+        <li role="presentation"> <%= link_to "Join us", how_to_join_path %></li>
+        <li role="presentation"> <%= link_to "Get started", what_you_need_path %></li>
+       <li  role="presentation"> <%= link_to "Event Programme", events_path %></li>
+        <li role="presentation"> <%= link_to "Club matters", club_matters_path %></li>
+        <li role="presentation"> <%= link_to "Where to find us?", directions_path %></li>
+        <li role="presentation"> <%= link_to "Extras", extraLinks_path %></li>
     </ul>
   </div>
  </div>   

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   resources :comm013_website
   # Apply root to home
   root to: 'comm013_website#home'
@@ -13,6 +15,8 @@ Rails.application.routes.draw do
   match '/directions', to: 'comm013_website#howtogetthere', via: [:get]
   match '/extraLinks', to: 'comm013_website#links', via: [:get]
 
+  resources :events
+  get 'events' => 'events#index' 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
