@@ -5,6 +5,11 @@ body{
     margin-right: auto;
     font-family: Arial, Sans-serif; 
     text-align: justify;
+    
+}
+li:hover{
+  background-color:  #E5E4E2;
+  border-radius: 10px;
 }
 .navbar-default{
     background-color: transparent;
@@ -15,9 +20,16 @@ body{
 .navbar-default .navbar-nav > li > a{
   color: #347C2C;
 }
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+  color: #ffffff;
+  background-color: #347C2C;
+  border-radius: 10px;
+  
+}
 #intro {
   padding-top: 25.93%;
   background: url('/assets/croquetImage.jpg') no-repeat;
+  filter: alpha(opacity=40); /* For IE8 and earlier */
   border-radius: 17px;
   background-size: cover;
   -moz-background-size: cover;  /* Firefox 3.6 */
@@ -44,8 +56,12 @@ body{
   @include maintain-ratio(1 1);
   
 }
-
-h2 h1 {
-  color: green;
+.intro-class{
+  text-shadow: 0px 3px 3px #666;
+  color: #F5F5DC;
+  font-size: 2.5vw;
+}
+h2 {
+  color: #41A317;
 }
 
