@@ -5,38 +5,10 @@ body{
     margin-right: auto;
     font-family: Arial, Sans-serif; 
     text-align: justify;
+    background-color: #e7e7e7;
     
 }
-li:hover{
-  background-color:  #E5E4E2;
-  border-radius: 10px;
-}
-.navbar-default{
-    background-color: transparent;
-    border: none;
-    font-size: 1.4em;
-    
-}
-.navbar-default .navbar-nav > li > a{
-  color: #347C2C;
-}
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
-  color: #ffffff;
-  background-color: #347C2C;
-  border-radius: 10px;
-  
-}
-#intro {
-  padding-top: 25.93%;
-  background: url('/assets/croquetImage.jpg') no-repeat;
-  filter: alpha(opacity=40); /* For IE8 and earlier */
-  border-radius: 17px;
-  background-size: cover;
-  -moz-background-size: cover;  /* Firefox 3.6 */
-  background-position: center;  /* Internet Explorer 7/8 */
-}
-/*maintains the ratio in maps images*/
-
+/*maintains the ratio in background images*/
 @mixin maintain-ratio($ratio: 1 1) {
   @if length($ratio) < 2 or length($ratio) > 2 {
     @warn "$ratio must be a list with two values.";
@@ -48,6 +20,41 @@ li:hover{
   height: 0;
   padding-bottom: $height;
 }
+#intro {
+  padding-top: 25.93%;
+  background: url('/assets/croquetImage.jpg') no-repeat;
+  filter: alpha(opacity=40); /* For IE8 and earlier */
+  border-radius: 17px;
+  background-size: cover;
+  -moz-background-size: cover;  /* Firefox 3.6 */
+  background-position: center;  /* Internet Explorer 7/8 */
+  opacity: 0.7;
+  filter: Alpha(opacity=20); /* IE8 and earlier */
+}
+h2 {
+  color: #41A317;
+}
+li:hover{
+  background-color:  #D4DBC9;
+  border-radius: 10px;
+}
+.navbar-default{
+    background-color: transparent;
+    border: none;
+    font-size: 1.1em;
+    margin-top: 1%;
+}
+.navbar-default .navbar-nav > li > a{
+  color: #347C2C;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+  color: #ffffff;
+  background-color: #347C2C;
+  border-radius: 10px;
+  
+}
+
+
 .location-container{
   overflow: hidden;
   @include maintain-ratio(1 1);
@@ -56,12 +63,7 @@ li:hover{
   @include maintain-ratio(1 1);
   
 }
-.intro-class{
-  text-shadow: 0px 3px 3px #666;
-  color: #F5F5DC;
-  font-size: 2.5vw;
-}
-h2 {
-  color: #41A317;
-}
+
+
+
 

@@ -1,5 +1,13 @@
 <script type="text/javascript">
+  //check if site is in root location then set home to active
+  if(this.location.pathname == "/"){
+    $(document).ready( function() {
+    $('#home-nav').addClass('active');
+    } );
+  }else{
+    //else check that the current location is set to active
   $('a[href="' + this.location.pathname + '"]').parents('li,ul').addClass('active');
+  }
 </script>
 <nav class="navbar navbar-default" role="navigation">
    <div class="container-fluid">
