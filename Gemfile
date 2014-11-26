@@ -28,12 +28,18 @@ gem 'spring',        group: :development
 
 # use Bootstrap for layout application 
 gem 'bootstrap-sass', '~> 3.2.0'
+
 gem 'autoprefixer-rails'
 
 gem 'devise'
 # Active Admin 
 gem 'activeadmin', github: 'activeadmin'
 
+# Use Carrierwave to handle file uploads
+gem 'carrierwave'
+
+#Add mini magick to add versions
+gem 'mini_magick'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

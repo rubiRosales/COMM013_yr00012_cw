@@ -1,3 +1,4 @@
+<!-- Hover shadow for current position-->
 <script type="text/javascript">
   //check if site is in root location then set home to active
       $(document).ready( function() {
@@ -9,6 +10,7 @@
   }
  } );
 </script>
+<!-- Start of navbar-->
 <nav class="navbar navbar-default" role="navigation">
    <div class="container-fluid">
    <div class="navbar-header">
@@ -25,7 +27,8 @@
         <li role="presentation"> <%= link_to "About us", about_path %></li>
         <li role="presentation"> <%= link_to "Join us", how_to_join_path %></li>
         <li role="presentation"> <%= link_to "Get started", what_you_need_path %></li>
-       <li  role="presentation"> <%= link_to "Event Programme", events_path %></li>
+        <li  role="presentation"> <%= link_to "Event Programme", events_path %></li>
+       <li  role="presentation"> <%= link_to "Newsletters", newsletters_path %></li>
         <li role="presentation"> <%= link_to "Club matters", club_matters_path %></li>
         <li role="presentation"> <%= link_to "Where to find us?", directions_path %></li>
         <li role="presentation"> <%= link_to "Extras", extraLinks_path %></li>
@@ -33,3 +36,4 @@
   </div>
  </div>   
 </nav>
+<!-- end of navbar-->

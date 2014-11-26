@@ -18,9 +18,15 @@ body{
 .navbar-default .navbar-toggle{
   border-color: transparent;
 }
-.carousel-control.left, .carousel-control.right{
- /* border-radius: 17px;*/
+
+.jumbotron{
+  background: url('/assets/croquetImage.jpg') no-repeat;
+  border-radius: 17px;
+  background-size: cover;
+  -moz-background-size: cover;  /* Firefox 3.6 */
+  background-position: center;  /* Internet Explorer 7/8 */
 }
+
 /*maintains the ratio in background images*/
 @mixin maintain-ratio($ratio: 1 1) {
   @if length($ratio) < 2 or length($ratio) > 2 {
@@ -28,20 +34,26 @@ body{
   }
   $width: 100%;
   $height: percentage(nth($ratio, 2) / nth($ratio, 1));
-  
   width: $width;
   height: 0;
   padding-bottom: $height;
 }
-#intro {
-  padding-top: 25.93%;
-  background: url('/assets/croquetImage.jpg') no-repeat;
-  /*border-radius: 17px;*/
-  background-size: cover;
-  -moz-background-size: cover;  /* Firefox 3.6 */
-  background-position: center;  /* Internet Explorer 7/8 */
 
+@font-face {
+    font-family: 'open_sansregular';
+    src: font-url('OpenSans-Regular-webfont.eot');
+    src: font-url('OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('OpenSans-Regular-webfont.woff') format('woff'),
+         font-url('OpenSans-Regular-webfont.ttf') format('truetype'),
+         font-url('OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
+
+h1{
+  font-family: 'open_sansregular';
+}
+
 h2 {
   color: #41A317;
 }
