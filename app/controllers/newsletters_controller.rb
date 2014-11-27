@@ -4,7 +4,6 @@ class NewslettersController < ApplicationController
     @title = "Newsletters"
   end
   def show
-    @title = "Show events"
   end
     private
     # Use callbacks to share common setup or constraints between actions.

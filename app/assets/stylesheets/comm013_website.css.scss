@@ -1,27 +1,59 @@
-
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #8AB800;//#26AF18; // light green for nav, h2 fonts 
+$secondary-color: #ffffff; // footer font, selected font nav
+$tertiary-color: #4f4f4f; // dark brown for nav background, h1 font, footer background.
+/*overides initial body style from bootstrap */
 body{
-    max-width: 940px;
+    max-width: 1080px;
     margin-left: auto;
     margin-right: auto;
-   font-family: Arial, Sans-serif; 
+    font-family: $font-stack; 
     text-align: justify;
-    
 }
-
-@media (max-width:768px){
+/*mobile phone*/
+@media (max-width:800px){
   body{
-    margin-left:7%;
-    margin-right:7%;
+    margin:5%;
   }
 }
-
-.navbar-default .navbar-toggle{
-  border-color: transparent;
+.main {
+  background-color: $secondary-color;
+  
+  h1{
+    margin: 0px;
+  }
+}
+//start nav bar
+.navbar{
+   margin: 0px;
+}
+.container-fluid{
+  background-color: $tertiary-color;
+  /*border-radius:17px;
+  background: -webkit-linear-gradient(180deg, #EAF6EA, #BEC7BE); /* For Safari 5.1 to 6.0 
+  background: -o-linear-gradient(180deg, #EAF6EA, #BEC7BE); /* For Opera 11.1 to 12.0 
+  background: -moz-linear-gradient(180deg, #EAF6EA, #BEC7BE); /* For Firefox 3.6 to 15 
+  background: linear-gradient(180deg, #EAF6EA, #BEC7BE); /* Standard syntax (must be last) */
+}
+.navbar-default{
+    background-color: transparent;
+    border: none;
+    font-size: medium;
+}
+.navbar-default .navbar-nav > li > a{
+  color: $primary-color;
 }
 
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+  color: $secondary-color;
+  border-bottom: thick solid $primary-color;
+  background-color: transparent;
+}//end nav style
+/*jumbotron contains a faded image, white font and no borders*/
 .jumbotron{
   background: url('/assets/croquetImage.jpg') no-repeat;
-  border-radius: 17px;
+  color: $secondary-color;
+  /*border-radius: 17px;*/
   background-size: cover;
   -moz-background-size: cover;  /* Firefox 3.6 */
   background-position: center;  /* Internet Explorer 7/8 */
@@ -38,7 +70,7 @@ body{
   height: 0;
   padding-bottom: $height;
 }
-
+/*New font style for the header of the pages
 @font-face {
     font-family: 'open_sansregular';
     src: font-url('OpenSans-Regular-webfont.eot');
@@ -49,49 +81,23 @@ body{
     font-weight: normal;
     font-style: normal;
 }
-
+*/
 h1{
-  font-family: 'open_sansregular';
+  /*font-family: 'open_sansregular';*/
+  
 }
 
 h2 {
-  color: #41A317;
+  color: $primary-color;
 }
-.container-fluid{
- /* background-color: #DEDEDC;*/
-  border-radius:17px;
-  background: -webkit-linear-gradient(180deg, #EAF6EA, #BEC7BE); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(180deg, #EAF6EA, #BEC7BE); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(180deg, #EAF6EA, #BEC7BE); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(180deg, #EAF6EA, #BEC7BE); /* Standard syntax (must be last) */
-}
-.navbar-default{
-    background-color: transparent;
-    border: none;
-    font-size: medium;
-}
-.navbar-default .navbar-nav > li > a{
-  color: #347C2C;
-}
-
-li:hover{
-  background-color:  #D4DBC9;
-  border-radius: 10px;
-}
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
-  color: #ffffff;
-  background-color: #347C2C;
-  border-radius: 10px;
-  
-}
+//map location start
 .location-container{
   overflow: hidden;
   @include maintain-ratio(1 1);
 }
 .map-show{
   @include maintain-ratio(1 1);
-  
-}
+}// map location ends
 
 
 
