@@ -41,6 +41,9 @@ gem 'carrierwave'
 #Add mini magick to add versions
 gem 'mini_magick'
 
+gem 'puma'
+
+gem 'rb-fsevent'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

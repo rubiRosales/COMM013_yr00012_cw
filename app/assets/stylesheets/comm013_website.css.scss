@@ -1,39 +1,56 @@
+@font-face{
+      font-family: Allura;
+      src: url('fonts/Allura-Regular.otf') format('opentype');
+}
+
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #8AB800;//#26AF18; // light green for nav, h2 fonts 
 $secondary-color: #ffffff; // footer font, selected font nav
 $tertiary-color: #4f4f4f; // dark brown for nav background, h1 font, footer background.
+$light-grey-color: #ebebeb;
+
 /*overides initial body style from bootstrap */
 body{
-    max-width: 1080px;
+    max-width: 1200px;
+    height: 900px;
     margin-left: auto;
     margin-right: auto;
     font-family: $font-stack; 
     text-align: justify;
+    font-size: 19px
 }
 /*mobile phone*/
 @media (max-width:800px){
-  body{
+  body, footer{
     margin:5%;
   }
 }
-.main {
-  background-color: $secondary-color;
-  
-  h1{
-    margin: 0px;
-  }
+// displays the site as table, for responsive footer
+.main-page{
+  display: table;
+  height: 100%;
+  width: 100%;
+  background-color: $light-grey-color;
+  table-layout: fixed;
+}
+
+footer{
+  display: table-row;
+  padding: 20px 0;
+  height: 20px;
+  background-color: $tertiary-color;
+  color: $secondary-color;
+  text-align: right;
 }
 //start nav bar
 .navbar{
    margin: 0px;
 }
+.navbar-brand{
+  float: none;
+}
 .container-fluid{
   background-color: $tertiary-color;
-  /*border-radius:17px;
-  background: -webkit-linear-gradient(180deg, #EAF6EA, #BEC7BE); /* For Safari 5.1 to 6.0 
-  background: -o-linear-gradient(180deg, #EAF6EA, #BEC7BE); /* For Opera 11.1 to 12.0 
-  background: -moz-linear-gradient(180deg, #EAF6EA, #BEC7BE); /* For Firefox 3.6 to 15 
-  background: linear-gradient(180deg, #EAF6EA, #BEC7BE); /* Standard syntax (must be last) */
 }
 .navbar-default{
     background-color: transparent;
@@ -43,12 +60,12 @@ body{
 .navbar-default .navbar-nav > li > a{
   color: $primary-color;
 }
-
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
   color: $secondary-color;
   border-bottom: thick solid $primary-color;
   background-color: transparent;
 }//end nav style
+
 /*jumbotron contains a faded image, white font and no borders*/
 .jumbotron{
   background: url('/assets/croquetImage.jpg') no-repeat;
@@ -68,37 +85,52 @@ body{
   $height: percentage(nth($ratio, 2) / nth($ratio, 1));
   width: $width;
   height: 0;
-  padding-bottom: $height;
+  /*padding-bottom: $height;*/
 }
-/*New font style for the header of the pages
-@font-face {
-    font-family: 'open_sansregular';
-    src: font-url('OpenSans-Regular-webfont.eot');
-    src: font-url('OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         font-url('OpenSans-Regular-webfont.woff') format('woff'),
-         font-url('OpenSans-Regular-webfont.ttf') format('truetype'),
-         font-url('OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-*/
-h1{
-  /*font-family: 'open_sansregular';*/
-  
+article {
+  padding: 5% 15%;
 }
 
-h2 {
+h1{
+  font-family: 'Allura';
+  color: $tertiary-color;
+  font-size: 90px;
+  text-align: center;
+  font-weight: bold;
+}
+.list-group-item{
+  background-color: $tertiary-color;
+}
+ strong, .tableTitle{
+  color: $tertiary-color;
+   
+}
+
+a{
   color: $primary-color;
 }
-//map location start
-.location-container{
-  overflow: hidden;
-  @include maintain-ratio(1 1);
+th{
+  background-color: $primary-color;
+  border: none;
+  font-size: 18px;
+  color: $secondary-color;
 }
-.map-show{
-  @include maintain-ratio(1 1);
-}// map location ends
+tr, .table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th, .table > tbody > tr > td{
+  background-color: transparent;
+  border-bottom: 1px solid $primary-color;
+}
 
+.tableTitle{
+  font-family: 'Allura';
+  font-weight:bold;
+  font-size: 25px;
+}
 
-
+.btn-success{
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+.booked {
+ color: #FF9999;
+}
 

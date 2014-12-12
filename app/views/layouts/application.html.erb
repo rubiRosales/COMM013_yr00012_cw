@@ -6,11 +6,13 @@
   <%= stylesheet_link_tag    'application', media: 'all'%>
   <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/gnutypewriter" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<%= render 'layouts/header' %>
-<%= render 'layouts/navBar'%>
-<%= yield %>
-
+  <div class="main-page">
+  <%= render 'layouts/header' %>  
+  <%= yield %> 
+   <%= render 'layouts/footer'%>
+  </div>
 </body>
 </html>

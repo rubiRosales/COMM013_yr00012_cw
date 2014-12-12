@@ -12,12 +12,20 @@
     </thead>
 
     <tbody>
-      <% @newsletters.each do |newsletter| %>
+      <% @year = nil %>
+      <% @newsletters.order('date DESC').each do |newsletter| %>
+      <%if(@year != newsletter.date.year.to_s) %>
+      <tr>
+        <td colspan="2" class="tableTitle">Newsletters of <%= newsletter.date.year.to_s %></td>
+      </tr>
+      <%end%>
         <tr>
-          <td><a href='<%= newsletter.newsletter%>'><%= newsletter.name %></a></td>
-          <td><%= newsletter.date %></td>
+          <td><a href='<%= newsletter.newsletter%>'><%=newsletter.name %></a></td>
+          <td><%= newsletter.date.strftime("%d/%m/%Y") %></td>
         </tr>
+      <% @year = newsletter.date.year.to_s %>
       <% end %>
     </tbody>
   </table>
   </section>
+</article>

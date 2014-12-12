@@ -22,6 +22,12 @@ Rails.application.routes.draw do
   
   get'newsletters'=> 'newsletters#index'
 
+  resources :lawnbookings
+  
+  get'lawnbookings'=> 'lawnbookings#index'
+  match "booking_lawn" => "lawnbookings#booking_lawn", via: :post
+  match "/get_booking" => "lawnbookings#get_booking", via: :get
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

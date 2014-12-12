@@ -1,7 +1,43 @@
-
-<header class="main">
-  <h1> <%= image_tag('CheamCroquet Club Logo.png') %></h1>
-</header>
-
-
-  
+<!-- Hover shadow for current position-->
+<script type="text/javascript">
+  //check if site is in root location then set home to active
+      $(document).ready( function() {
+  if(this.location.pathname == "/"){
+    $('#home-nav').addClass('active');
+  }else{
+    //else check that the current location is set to active
+  $('a[href="' + this.location.pathname + '"]').parents('li,ul').addClass('active');
+  }
+ } );
+</script>
+<!-- Start of navbar-->
+<nav class="navbar navbar-default" role="navigation">
+   <div class="container-fluid">
+   <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    <!-- <a class="navbar-brand" href="home">
+        <%= image_tag('CheamCroquet Club Logo.png', alt: "Logo") %>
+      </a>-->
+    </div>  
+   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     <ul class="nav navbar-nav">
+        <li id='home-nav' role="presentation"> <%= link_to "Home", root_path %></li>
+        <li role="presentation"> <%= link_to "About us", about_path %></li>
+        <li role="presentation"> <%= link_to "Join us", how_to_join_path %></li>
+        <li role="presentation"> <%= link_to "Get started", what_you_need_path %></li>
+        <li  role="presentation"> <%= link_to "Event Programme", events_path %></li>
+       <li  role="presentation"> <%= link_to "Newsletters", newsletters_path %></li>
+       <li  role="presentation"> <%= link_to "Book Lawn", lawnbookings_path %></li>
+        <li role="presentation"> <%= link_to "Club matters", club_matters_path %></li>
+        <li role="presentation"> <%= link_to "Where to find us?", directions_path %></li>
+        <li role="presentation"> <%= link_to "Extras", extraLinks_path %></li>
+    </ul>
+  </div>
+ </div>   
+</nav>
+<!-- end of navbar-->
