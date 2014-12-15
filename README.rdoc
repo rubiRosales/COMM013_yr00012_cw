@@ -4,6 +4,8 @@ This project was done in Nitrous.io, using their version of Ruby.
 
 Cheam croquet club, all the questions from the Assignment sheet have been included. 
 
+To see the Admin side where you can add, edit or remove  Newsletters, Event please add '/admin' with the same login name and password. 
+
 Yurubi Rosales Suarez
 URN: 6152223
 
